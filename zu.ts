@@ -4,6 +4,7 @@ import { createJSONStorage, persist } from "zustand/middleware";
 
 interface StoreState {
   counter: number;
+  isLoading: boolean;
   increaseCounter: () => Promise<void>;
   resetCounter: () => void;
   fetchHeightFromSecondStore: () => void; // Add this function
@@ -26,9 +27,13 @@ async function fetchData() {
 }
 const useCounter = create<StoreState>((set) => ({
   counter: 0,
+  isLoading: false,
   increaseCounter: async () => {
+    set({ isLoading: true });
     const res = await fetchData();
     console.log(res);
+
+    set({ isLoading: false });
 
     // set((state) => ({ counter: state.counter + 1 }));
   },

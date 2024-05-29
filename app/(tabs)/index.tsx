@@ -4,7 +4,7 @@ import { Image, StyleSheet, Text, View } from "react-native";
 export default function HomeScreen() {
   const counter = useCounter((state) => state);
   const height = useSecondStore((state) => state);
-  console.log(height);
+  console.log(counter.isLoading);
 
   return (
     <View style={{ flex: 1, marginVertical: 100 }}>
