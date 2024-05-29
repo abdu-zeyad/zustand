@@ -1,14 +1,18 @@
-import useCounter from "@/zu";
+import { useCounter, useSecondStore } from "@/zu";
 import { Image, StyleSheet, Text, View } from "react-native";
 
 export default function HomeScreen() {
   const counter = useCounter((state) => state);
+  const height = useSecondStore((state) => state);
+  console.log(height);
+
   return (
     <View style={{ flex: 1, marginVertical: 100 }}>
       <Text>{counter.counter}</Text>
       <Text
         onPress={() => {
-          counter.increaseCounter();
+          counter.fetchHeightFromSecondStore();
+          //height.increaseHeight();
         }}
       >
         increase

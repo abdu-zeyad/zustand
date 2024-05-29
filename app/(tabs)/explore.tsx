@@ -6,7 +6,7 @@ import { ExternalLink } from "@/components/ExternalLink";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
-import useCounter from "@/zu";
+import { useCounter } from "@/zu";
 
 export default function TabTwoScreen() {
   const counter = useCounter((state) => state);
