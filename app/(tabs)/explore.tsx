@@ -14,13 +14,13 @@ export default function TabTwoScreen() {
   return (
     <View style={{ flex: 1, marginVertical: 100 }}>
       <Text>{counter.counter}</Text>
-      {/* <Text
+      <Text
         onPress={() => {
-          counter.increaseCounter();
+          counter.resetCounter();
         }}
       >
-        increase
-      </Text> */}
+        reset
+      </Text>
     </View>
   );
 }
