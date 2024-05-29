@@ -11,7 +11,7 @@ export default function HomeScreen() {
       <Text>{counter.counter}</Text>
       <Text
         onPress={() => {
-          counter.fetchHeightFromSecondStore();
+          counter.increaseCounter();
           //height.increaseHeight();
         }}
       >
