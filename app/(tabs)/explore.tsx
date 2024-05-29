@@ -7,9 +7,14 @@ import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { useCounter } from "@/zu";
+import getData from "@/constat";
+import { useEffect } from "react";
 
 export default function TabTwoScreen() {
   const counter = useCounter((state) => state);
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <View style={{ flex: 1, marginVertical: 100 }}>
